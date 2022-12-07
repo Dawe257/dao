@@ -1,4 +1,4 @@
-package com.dzhenetl.dao.repository.controller;
+package com.dzhenetl.dao.controller;
 
 import com.dzhenetl.dao.repository.ProductRepository;
 import org.springframework.web.bind.annotation.GetMapping;
