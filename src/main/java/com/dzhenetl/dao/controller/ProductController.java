@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/products/fetch-product")
+@RestController("/products")
 public class ProductController {
 
     ProductRepository repository;
@@ -14,7 +14,7 @@ public class ProductController {
         this.repository = repository;
     }
 
-    @GetMapping("/products/fetch-product")
+    @GetMapping("/fetch-product")
     public String getProduct(@RequestParam(name = "name") String name) {
         return repository.getProductName(name);
     }
