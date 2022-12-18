@@ -7,14 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-//    @GetMapping("/hello")
-//    public String hello() {
-//        return "Hello!";
-//    }
-
     @GetMapping("/hello")
-    public String hello(Authentication auth) {
-        System.out.println();
+    public String hello() {
         return "Hello!";
+    }
+
+    @GetMapping("/helloUser")
+    public String hello(Authentication auth) {
+        return "Hello " + auth.getName();
     }
 }
